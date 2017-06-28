@@ -8,10 +8,26 @@ section .text
     global _start
 
 _start:
-    add eax,2
+    mov edx,userMsgLen       ; String Size
+    mov ecx,userMsg
+    mov ebx, 1
+    mov eax, 4
+    int 0x80
+
+    mov edx,50              ; String Size
+    mov ecx,nome
+    mov ebx, 1
+    mov eax, 4
+    int 0x80
+
+    mov edx,dispMsgLen      ; String Size
+    mov ecx,dispMsg
+    mov ebx, 1
+    mov eax, 4
+    int 0x80
 
     mov edx,2               ; String Size
-    mov ecx,num
+    mov ecx,nome
     mov ebx, 1
     mov eax, 4
     int 0x80
@@ -28,4 +44,4 @@ dispMsg: db 'Hello '
 dispMsgLen: equ $ - dispMsg
 
 section .bss  ; Unitizialized Data
-num: resb 50 ; 50 bytes
+nome: resb 50 ; 50 bytes
