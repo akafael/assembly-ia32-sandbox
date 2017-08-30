@@ -17,7 +17,7 @@ Guiding myself trough the hidden path of assembly ia-32
 ### Installing on Ubuntu
 ```
 # Install NASM disassembler
-sudo apt-get install
+sudo apt-get install nasm
 ```
 
 ## Reference
