@@ -22,6 +22,7 @@ sudo apt-get install nasm
 
 ### Compiling Code
 ```
+cd src
 make
 ```
 
