@@ -12,7 +12,7 @@ Guiding myself trough the hidden path of assembly ia-32
  * infinityLoop.s "Addressing Modes, Infinity Looping"
  * alphabetLoop.s "Loop Instruction Use, Printing the Alphabet"
 
-## Tools
+## Requirements
 
  * [NASM](http://www.nasm.us/)
 
@@ -20,6 +20,12 @@ Guiding myself trough the hidden path of assembly ia-32
 ```
 # Install NASM disassembler
 sudo apt-get install nasm
+```
+
+### Compiling Code
+```
+cd src
+make
 ```
 
 ## Reference
