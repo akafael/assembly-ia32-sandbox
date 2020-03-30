@@ -13,6 +13,7 @@ addons:
     - llvm-toolchain-precise-3.8
     packages:
     - g++-6
+    - nasm
 install:
 - "[ $CXX = g++ ] && export CXX=g++-6 || true"
 script:
