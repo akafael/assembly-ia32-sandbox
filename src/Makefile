@@ -1,22 +1,42 @@
 ##
+# Basic Makefile to Compile assembly ia-32
 #
+# @author Rafael Lima
 ##
+
+###############################################################################
+# Variables
+###############################################################################
 
 NAME = test
 
-.PHONY:ALL
-ALL: $(NAME)
+CC := nasm
+CFLAGS := -f elf
 
-$(NAME).o: $(NAME).s
-	nasm -f elf $(NAME).s -o $(NAME).o
+SRC := $(wildcard *.s)
+OBJ := $(SRC:.s=.o)
+BIN := $(basename ${SRC})
 
-$(NAME): $(NAME).o
-	ld -o $(NAME) $(NAME).o -m elf_i386
+###############################################################################
+# Rules
+###############################################################################
 
+# One Rule to rule then all
+.PHONY:all
+all: ${OBJ} ${BIN}
+
+%.o: %.s
+	nasm -f elf $< -o $@
+
+%: %.o
+	ld -o $@ $< -m elf_i386
+
+# Remove Generated Files
 .PHONY:clear
 clear:
-	rm -v $(NAME) $(NAME).o
+	-rm -v ${OBJ} ${BIN}
 
+# Compile and Run Program
 .PHONY: run
 run: $(NAME)
 	./$(NAME)

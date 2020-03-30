@@ -39,7 +39,7 @@ _start:
 ; Data Section --------------------------------------------
 section .data
 userMsg: db 'Please enter your first name: '
-useMsgLen: equ $ - userMsg
+userMsgLen: equ $ - userMsg
 dispMsg: db 'Hello '
 dispMsgLen: equ $ - dispMsg
 

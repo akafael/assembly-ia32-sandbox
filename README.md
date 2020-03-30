@@ -21,7 +21,6 @@ Guiding myself trough the hidden path of assembly ia-32
 # Install NASM disassembler
 sudo apt-get install nasm
 ```
-
 ### Compiling Code
 ```
 cd src
