@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/akafael/assembly-ia32-sandbox.svg?branch=master)](https://travis-ci.org/akafael/assembly-ia32-sandbox)
+
 Assembly IA-32
 =============
 
